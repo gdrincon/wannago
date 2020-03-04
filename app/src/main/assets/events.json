@@ -1,0 +1,37 @@
+[
+  {
+    "name" : "Sònar Festival",
+    "date" : "19/07/2020",
+    "time" : "09:00",
+    "location" : "Fira de Barcelona",
+    "description" : "Festival de música electrónica"
+  },
+  {
+    "name" : "Primavera Sound",
+    "date" : "07/06/2020",
+    "time" : "12:00",
+    "location" : "Forum, Barcelona",
+    "description" : "Festival de música"
+  },
+  {
+    "name" : "Mc Cool",
+    "date" : "15/08/2020",
+    "time" : "15:00",
+    "location" : "Wizink center, Madrid",
+    "description" : "Festival de música"
+  },
+  {
+    "name" : "Teatre al carrer",
+    "date" : "19/12/2019",
+    "time" : "18:00",
+    "location" : "Vic",
+    "description" : "Festival de teatre"
+  },
+  {
+    "name" : "Adam green",
+    "date" : "26/04/2020",
+    "time" : "21:00",
+    "location" : "Sala Apollo",
+    "description" : "Concierto de indie folk"
+  }
+]

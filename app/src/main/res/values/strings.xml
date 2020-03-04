@@ -1,0 +1,35 @@
+<resources>
+    <string name="red_asterisk">*</string>
+    <!-- Login activity -->
+    <string name="app_name">Wannago</string>
+    <string name="list_event_activity_tittle">List of events</string>
+    <string name="add_event_activity_tittle">Add an event</string>
+    <string name="view_event_activity_tittle">Event detail</string>
+    <string name="login_event_activity_tittle">Wanna go</string>
+    <string name="login_txt">Login</string>
+    <string name="register_txt">Register</string>
+    <string name="user_hint">User name</string>
+    <string name="pwd_hint">Password</string>
+    <string name="login_image_descrioption">Wannago Logo</string>
+    <string name="version_txt">Version 1.0</string>
+    <!-- AddEvent Activity -->
+    <string name="field_required_toast_msg">Fields with an asterisk are required</string>
+    <string name="add_name_event_hint">Name of the event</string>
+    <string name="add_description_event_hint">Description</string>
+    <string name="add_date_event_hint">Date</string>
+    <string name="add_time_event_hint">Time</string>
+    <string name="add_location_event_hint">Location</string>
+    <string name="editText_error_msg">Field is required!</string>
+    <!-- Alert Dialog -->
+    <string name="chooseImageDialogTittle">Choose an option</string>
+    <string name="chooseImageDialogCamera">Take a picture</string>
+    <string name="chooseImageDialogImage">Pick an image</string>
+    <string name="chooseImageDialogCancel">Cancel</string>
+    <string-array name="chooseImageDialog">
+        <item>Take a picture</item>
+        <item>Pick an image</item>
+        <item>Cancel</item>
+    </string-array>
+    <string name="title_activity_view_car_detail">ViewCarDetailActivity</string>
+    <string name="title_activity_add_car">AddCarActivity</string>
+</resources>

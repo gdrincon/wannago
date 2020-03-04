@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.jaumebalmes.grincon17.wannago">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".AddCarActivity"
+            android:label="@string/title_activity_add_car"
+            android:parentActivityName=".ListCarActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.jaumebalmes.grincon17.wannago.ListCarActivity" />
+        </activity>
+        <activity android:name=".ListCarActivity" />
+        <activity
+            android:name=".ViewCarDetailActivity"
+            android:label="@string/title_activity_view_car_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ViewEventDetailActivity"
+            android:label="@string/view_event_activity_tittle"
+            android:parentActivityName=".ListEventActivity">
+            <meta-data
+                android:name="android.support.PARENT.ACTIVITY"
+                android:value="net.jaumebalmes.grincon17.wannago.AddEventActivity" />
+        </activity>
+        <activity
+            android:name=".AddEventActivity"
+            android:label="@string/add_event_activity_tittle"
+            android:parentActivityName=".ListEventActivity">
+            <meta-data
+                android:name="android.support.PARENT.ACTIVITY"
+                android:value="net.jaumebalmes.grincon17.wannago.ListEventActivity" />
+        </activity>
+        <activity
+            android:name=".ListEventActivity"
+            android:label="@string/list_event_activity_tittle"
+            android:parentActivityName=".LoginActivity">
+            <meta-data
+                android:name="android.support.PARENT.ACTIVITY"
+                android:value="net.jaumebalmes.grincon17.wannago.LoginActivity" />
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/login_event_activity_tittle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
