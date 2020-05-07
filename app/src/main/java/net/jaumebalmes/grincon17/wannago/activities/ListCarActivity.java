@@ -1,8 +1,10 @@
-package net.jaumebalmes.grincon17.wannago;
+package net.jaumebalmes.grincon17.wannago.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import net.jaumebalmes.grincon17.wannago.R;
 
 public class ListCarActivity extends AppCompatActivity {
 

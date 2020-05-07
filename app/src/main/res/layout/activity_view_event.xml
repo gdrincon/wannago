@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ViewEventDetailActivity">
+    tools:context=".activities.ViewEventDetailActivity">
 
     <ImageView
         android:id="@+id/imageViewDetailEvent"
-        android:layout_width="409dp"
-        android:layout_height="262dp"
+        android:layout_width="375dp"
+        android:layout_height="261dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wannago_bone" />
+        app:srcCompat="@drawable/wannago_bone"/>
 
     <TextView
         android:id="@+id/textViewDetailName"
@@ -23,6 +24,7 @@
         android:textColor="@color/colorPrimaryDark"
         android:textSize="24dp"
         android:textStyle="bold"
+        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toTopOf="@+id/textViewDetailDescription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -34,10 +36,11 @@
         android:id="@+id/textViewDetailDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="12dp"
         android:text="TextView"
-        android:textSize="16dp"
         android:textColor="@color/colorGrey"
+        android:textSize="16dp"
         app:layout_constraintBottom_toTopOf="@+id/divider3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -47,6 +50,7 @@
         android:id="@+id/textViewDetailDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:text="TextView"
         android:textColor="@color/colorGrey"
         android:textSize="16dp"
@@ -61,6 +65,7 @@
         android:id="@+id/textViewDetailTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginBottom="12dp"
         android:text="TextView"
         android:textColor="@color/colorGrey"
@@ -74,9 +79,10 @@
         android:id="@+id/textViewDetailLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:text="TextView"
-        android:textSize="16dp"
         android:textColor="@color/colorGrey"
+        android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -86,7 +92,7 @@
 
     <View
         android:id="@+id/divider3"
-        android:layout_width="309dp"
+        android:layout_width="315dp"
         android:layout_height="1dp"
         android:layout_marginEnd="32dp"
         android:background="@color/colorAccentLight"
@@ -101,7 +107,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.2457421" />
+        app:layout_constraintGuide_end="361dp" />
 
     <View
         android:id="@+id/divider4"
@@ -114,4 +120,13 @@
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/imageViewDetailEvent"
         app:layout_constraintVertical_bias="0.452" />
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="291dp"
+        android:layout_height="160dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailLocation" />
 </androidx.constraintlayout.widget.ConstraintLayout>

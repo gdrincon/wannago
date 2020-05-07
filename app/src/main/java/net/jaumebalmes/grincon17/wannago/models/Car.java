@@ -1,4 +1,4 @@
-package net.jaumebalmes.grincon17.wannago;
+package net.jaumebalmes.grincon17.wannago.models;
 
 import java.util.ArrayList;
 

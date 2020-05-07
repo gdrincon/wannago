@@ -1,4 +1,4 @@
-package net.jaumebalmes.grincon17.wannago;
+package net.jaumebalmes.grincon17.wannago.models;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -22,7 +22,7 @@ public class Event {
     @SerializedName("description")
     private String description;
 
-    Event(String img, String name, String date, String time, String location, String description) {
+    public Event(String img, String name, String date, String time, String location, String description) {
         this.img = img;
         this.name = name;
         this.date = date;

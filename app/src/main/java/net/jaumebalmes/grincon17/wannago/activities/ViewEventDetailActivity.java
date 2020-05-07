@@ -1,4 +1,4 @@
-package net.jaumebalmes.grincon17.wannago;
+package net.jaumebalmes.grincon17.wannago.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,11 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
+
+import net.jaumebalmes.grincon17.wannago.R;
+import net.jaumebalmes.grincon17.wannago.models.Event;
 
 public class ViewEventDetailActivity extends AppCompatActivity {
 
@@ -23,14 +27,15 @@ public class ViewEventDetailActivity extends AppCompatActivity {
         TextView location = findViewById(R.id.textViewDetailLocation);
         TextView description = findViewById(R.id.textViewDetailDescription);
 
-
         Gson gson = new Gson();
         Event event = gson.fromJson(getIntent().getStringExtra("JSON_EVENT"), Event.class);
+        Glide.with(ViewEventDetailActivity.this).load(event.getImg()).into(img);
         img.setImageURI(Uri.parse(event.getImg()));
         name.setText(event.getName());
         date.setText(event.getDate());
         time.setText(event.getTime());
         location.setText(event.getLocation());
         description.setText(event.getDescription());
+
     }
 }

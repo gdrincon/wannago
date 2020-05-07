@@ -1,4 +1,4 @@
-package net.jaumebalmes.grincon17.wannago;
+package net.jaumebalmes.grincon17.wannago.activities;
 
 import android.os.Bundle;
 
@@ -10,12 +10,14 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 
-public class AddCarActivity extends AppCompatActivity {
+import net.jaumebalmes.grincon17.wannago.R;
+
+public class ViewCarDetailActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_car);
+        setContentView(R.layout.activity_view_car_detail);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -27,7 +29,6 @@ public class AddCarActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
 }

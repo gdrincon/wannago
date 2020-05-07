@@ -2,7 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.jaumebalmes.grincon17.wannago">
 
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <uses-feature
         android:name="android.hardware.camera.any"
@@ -11,9 +20,6 @@
         android:name="android.hardware.camera.autofocus"
         android:required="false" />
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,46 +27,59 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
         <activity
-            android:name=".AddCarActivity"
+            android:name=".activities.AddCarActivity"
             android:label="@string/title_activity_add_car"
-            android:parentActivityName=".ListCarActivity"
+            android:parentActivityName=".activities.ListCarActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="net.jaumebalmes.grincon17.wannago.ListCarActivity" />
+                android:value="net.jaumebalmes.grincon17.wannago.activities.ListCarActivity" />
         </activity>
-        <activity android:name=".ListCarActivity" />
+        <activity android:name=".activities.ListCarActivity" />
         <activity
-            android:name=".ViewCarDetailActivity"
+            android:name=".activities.ViewCarDetailActivity"
             android:label="@string/title_activity_view_car_detail"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ViewEventDetailActivity"
+            android:name=".activities.ViewEventDetailActivity"
             android:label="@string/view_event_activity_tittle"
-            android:parentActivityName=".ListEventActivity">
+            android:parentActivityName=".activities.ListEventActivity">
             <meta-data
                 android:name="android.support.PARENT.ACTIVITY"
                 android:value="net.jaumebalmes.grincon17.wannago.AddEventActivity" />
         </activity>
         <activity
-            android:name=".AddEventActivity"
+            android:name=".activities.AddEventActivity"
             android:label="@string/add_event_activity_tittle"
-            android:parentActivityName=".ListEventActivity">
+            android:parentActivityName=".activities.ListEventActivity">
             <meta-data
                 android:name="android.support.PARENT.ACTIVITY"
                 android:value="net.jaumebalmes.grincon17.wannago.ListEventActivity" />
         </activity>
         <activity
-            android:name=".ListEventActivity"
+            android:name=".activities.ListEventActivity"
             android:label="@string/list_event_activity_tittle"
-            android:parentActivityName=".LoginActivity">
+            android:parentActivityName=".activities.LoginActivity">
             <meta-data
                 android:name="android.support.PARENT.ACTIVITY"
                 android:value="net.jaumebalmes.grincon17.wannago.LoginActivity" />
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".activities.LoginActivity"
             android:label="@string/login_event_activity_tittle">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
