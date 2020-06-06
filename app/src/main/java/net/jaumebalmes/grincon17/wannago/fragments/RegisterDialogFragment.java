@@ -30,16 +30,6 @@ public class RegisterDialogFragment extends DialogFragment {
     private EditText pwd;
     private EditText email;
 
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_register_dialog, container, false);
-        userName = view.findViewById(R.id.textEditNewUserName);
-        pwd = view.findViewById(R.id.textEditNewPwd);
-        email = view.findViewById(R.id.textEditNewEmail);
-        return view;
-    }
-
     @SuppressLint("InflateParams")
     @NonNull
     @Override
@@ -90,11 +80,5 @@ public class RegisterDialogFragment extends DialogFragment {
         }
     }
 
-    public Boolean emptyFields(String name, String pwd, String email) {
-        return TextUtils.isEmpty(name) && TextUtils.isEmpty(pwd) && TextUtils.isEmpty(email);
-    }
 
-    public Boolean validatePwd(String pwd) {
-        return  true;
-    }
 }

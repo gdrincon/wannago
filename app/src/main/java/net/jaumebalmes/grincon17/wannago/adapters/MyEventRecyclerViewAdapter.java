@@ -50,15 +50,13 @@ public class MyEventRecyclerViewAdapter extends RecyclerView.Adapter<MyEventRecy
         holder.textViewDate.setText(holder.mItem.getDate());
         holder.textViewTime.setText(holder.mItem.getTime());
         holder.textViewLocation.setText(holder.mItem.getLocation());
-        Glide.with(mContext).load(holder.mItem.getImg()).into(holder.imageViewEvent);
+        Glide.with(mContext).load(holder.mItem.getImg()).centerCrop().into(holder.imageViewEvent);
 
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (null != mListener) {
-                    // Notify the active callbacks interface (the activity, if the
-                    // fragment is attached to one) that an item has been selected.
                     mListener.onEventClickListener(holder.mItem);
                 }
             }

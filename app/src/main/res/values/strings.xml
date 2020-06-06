@@ -35,4 +35,12 @@
     </string-array>
     <string name="title_activity_view_car_detail">ViewCarDetailActivity</string>
     <string name="title_activity_add_car">AddCarActivity</string>
+    <string name="my_pref">myPref</string>
+    <string name="my_username">userName</string>
+    <string name="my_pwd">pwd</string>
+    <string name="my_email">mail</string>
+    <string name="login_success">Success registration, please login</string>
+    <string name="register_message">You must register first</string>
+    <string name="account_icon">account</string>
+    <string name="search_icon">search</string>
 </resources>
