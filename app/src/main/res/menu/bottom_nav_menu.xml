@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_events"
+        android:title="@string/bottom_nav_activity_tittle"
+        android:icon="@drawable/ic_view_list_white_24dp"/>
+    <item
+        android:id="@+id/navigation_user"
+        android:title="@string/account_activity_tittle"
+        android:icon="@drawable/ic_account_circle_white_24dp"/>
+    
+</menu>

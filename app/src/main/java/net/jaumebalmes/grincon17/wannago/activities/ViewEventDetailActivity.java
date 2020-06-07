@@ -30,7 +30,7 @@ public class ViewEventDetailActivity extends AppCompatActivity {
         Gson gson = new Gson();
         Event event = gson.fromJson(getIntent().getStringExtra("JSON_EVENT"), Event.class);
         Glide.with(ViewEventDetailActivity.this).load(event.getImg()).into(img);
-        img.setImageURI(Uri.parse(event.getImg()));
+        //img.setImageURI(Uri.parse(event.getImg()));
         name.setText(event.getName());
         date.setText(event.getDate());
         time.setText(event.getTime());

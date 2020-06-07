@@ -1,25 +1,21 @@
 package net.jaumebalmes.grincon17.wannago.models;
 
-import com.google.gson.annotations.SerializedName;
+import java.io.Serializable;
 
-public class Event {
+public class Event implements Serializable {
 
-    @SerializedName("img")
+    private long id;
+
     private String img;
 
-    @SerializedName("name")
     private String name;
 
-    @SerializedName("date")
     private String date;
 
-    @SerializedName("time")
     private String time;
 
-    @SerializedName("location")
     private String location;
 
-    @SerializedName("description")
     private String description;
 
     public Event(String img, String name, String date, String time, String location, String description) {
@@ -29,6 +25,10 @@ public class Event {
         this.time = time;
         this.location = location;
         this.description = description;
+    }
+
+    public long getId() {
+        return id;
     }
 
     public String getImg() {

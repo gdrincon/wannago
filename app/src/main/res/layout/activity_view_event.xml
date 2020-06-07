@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="@dimen/text_margin"
     tools:context=".activities.ViewEventDetailActivity">
 
     <ImageView
@@ -20,6 +21,7 @@
         android:id="@+id/textViewDetailName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:text="TextView"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="24dp"
@@ -107,7 +109,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="361dp" />
+        app:layout_constraintGuide_percent="0.007915568" />
 
     <View
         android:id="@+id/divider4"
@@ -121,7 +123,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageViewDetailEvent"
         app:layout_constraintVertical_bias="0.452" />
 
-    <fragment
+    <FrameLayout
         android:id="@+id/map"
         android:layout_width="291dp"
         android:layout_height="160dp"

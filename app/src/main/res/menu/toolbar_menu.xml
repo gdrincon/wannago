@@ -5,8 +5,8 @@
         android:icon="@drawable/ic_search_white_24dp"
         android:title="@string/search_icon"
         app:showAsAction="ifRoom"/>
-    <item android:id="@+id/account_login"
-        android:icon="@drawable/ic_account_circle_white_24dp"
-        android:title="@string/account_icon"
+    <item android:id="@+id/add_event"
+        android:icon="@drawable/ic_add_circle_white_24dp"
+        android:title="@string/add_event_activity_tittle"
         app:showAsAction="ifRoom"/>
 </menu>

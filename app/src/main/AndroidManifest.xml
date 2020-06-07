@@ -57,7 +57,7 @@
         <activity
             android:name=".activities.ViewEventDetailActivity"
             android:label="@string/view_event_activity_tittle"
-            android:parentActivityName=".activities.ListEventActivity">
+            android:parentActivityName=".activities.BottomNavActivity">
             <meta-data
                 android:name="android.support.PARENT.ACTIVITY"
                 android:value="net.jaumebalmes.grincon17.wannago.AddEventActivity" />
@@ -65,14 +65,14 @@
         <activity
             android:name=".activities.AddEventActivity"
             android:label="@string/add_event_activity_tittle"
-            android:parentActivityName=".activities.ListEventActivity">
+            android:parentActivityName=".activities.BottomNavActivity">
             <meta-data
                 android:name="android.support.PARENT.ACTIVITY"
                 android:value="net.jaumebalmes.grincon17.wannago.ListEventActivity" />
         </activity>
         <activity
-            android:name=".activities.ListEventActivity"
-            android:label="@string/list_event_activity_tittle"
+            android:name=".activities.BottomNavActivity"
+            android:label="@string/bottom_nav_activity_tittle"
             android:parentActivityName=".activities.LoginActivity">
             <meta-data
                 android:name="android.support.PARENT.ACTIVITY"
