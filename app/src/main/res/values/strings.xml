@@ -2,6 +2,7 @@
     <string name="red_asterisk">*</string>
     <!-- Login activity -->
     <string name="app_name">Wannago</string>
+    <string name="authorities">net.jaumebalmes.grincon17.wannago.provider</string>
     <string name="bottom_nav_activity_tittle">Events</string>
     <string name="add_event_activity_tittle">Add event</string>
     <string name="view_event_activity_tittle">Event detail</string>
@@ -133,4 +134,7 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="ok">Ok</string>
+    <string name="permission_granted">Permission granted</string>
+    <string name="need_permission">Must grant permission</string>
 </resources>

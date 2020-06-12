@@ -4,18 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/text_margin"
+
     tools:context=".activities.ViewEventDetailActivity">
+
+    <include layout="@layout/toolbar" android:id="@+id/toolbar"/>
 
     <ImageView
         android:id="@+id/imageViewDetailEvent"
         android:layout_width="375dp"
         android:layout_height="261dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/image_view_margin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wannago_bone"/>
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@drawable/wannago_bone" />
 
     <TextView
         android:id="@+id/textViewDetailName"
@@ -27,6 +29,7 @@
         android:textSize="24dp"
         android:textStyle="bold"
         android:layout_marginTop="16dp"
+        android:layout_marginStart="@dimen/text_margin"
         app:layout_constraintBottom_toTopOf="@+id/textViewDetailDescription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

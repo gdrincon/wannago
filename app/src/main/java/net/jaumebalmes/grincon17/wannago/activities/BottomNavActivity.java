@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.gson.Gson;
@@ -23,7 +24,6 @@ import net.jaumebalmes.grincon17.wannago.models.Event;
 public class BottomNavActivity extends AppCompatActivity implements OnEventListInteractionListener,
         BottomNavigationView.OnNavigationItemSelectedListener{
 
-    private Fragment currentFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +47,14 @@ public class BottomNavActivity extends AppCompatActivity implements OnEventListI
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.search_icon :
+                Toast.makeText(getApplicationContext(), "Search", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.add_event :
+                startActivity(new Intent(BottomNavActivity.this, AddEventActivity.class));
+                break;
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -62,7 +70,7 @@ public class BottomNavActivity extends AppCompatActivity implements OnEventListI
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.navigation_events :
-                currentFragment = new EventFragment();
+                Fragment currentFragment = new EventFragment();
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmentEvents, currentFragment).commit();
                 break;
             case R.id.navigation_user :

@@ -14,6 +14,7 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.AutoCompleteTextView;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -26,6 +27,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import net.jaumebalmes.grincon17.wannago.R;
+import net.jaumebalmes.grincon17.wannago.adapters.PlaceAutocompleteAdapter;
 import net.jaumebalmes.grincon17.wannago.models.Event;
 
 import java.io.FileWriter;
@@ -41,7 +43,7 @@ public class AddEventActivity extends AppCompatActivity {
     private EditText eventDescription;
     private EditText eventDate;
     private EditText eventTime;
-    private EditText eventLocation;
+    private AutoCompleteTextView eventLocation;
     private TextInputLayout textInputLayoutName;
     private TextInputLayout textInputLayoutDate;
     private TextInputLayout textInputLayoutTime;
@@ -57,7 +59,7 @@ public class AddEventActivity extends AppCompatActivity {
         eventDescription = findViewById(R.id.editTextDescriptionEvent);
         eventDate = findViewById(R.id.editTextDateEvent);
         eventTime = findViewById(R.id.editTextTimeEvent);
-        eventLocation = findViewById(R.id.editTextAddressEvent);
+        eventLocation = findViewById(R.id.autoCompleteTextAddressEvent);
         textInputLayoutName = findViewById(R.id.textInputLayoutName);
         textInputLayoutDate = findViewById(R.id.textInputLayoutDate);
         textInputLayoutTime = findViewById(R.id.textInputLayoutTime);
@@ -95,6 +97,7 @@ public class AddEventActivity extends AppCompatActivity {
                 addNewEvent();
             }
         });
+        eventLocation.setAdapter(new PlaceAutocompleteAdapter(AddEventActivity.this, android.R.layout.simple_list_item_1));
     }
 
     private void drawMandatoryFieldAsterisk() {

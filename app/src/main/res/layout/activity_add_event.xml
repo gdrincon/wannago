@@ -143,10 +143,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutTime">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextAddressEvent"
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/autoCompleteTextAddressEvent"
             android:layout_width="match_parent"
-            android:layout_height="37dp"
+            android:layout_height="wrap_content"
             android:background="@null"
             android:clickable="true"
             android:ems="10"

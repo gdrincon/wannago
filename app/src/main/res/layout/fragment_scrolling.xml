@@ -21,6 +21,7 @@
             app:toolbarId="@+id/toolbar">
 
             <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewUserName"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_margin="@dimen/fab_margin"
@@ -29,6 +30,7 @@
                 app:srcCompat="@drawable/ic_account_circle_white_24dp"/>
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewUserName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/text_margin"
