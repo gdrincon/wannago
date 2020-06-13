@@ -1,23 +1,15 @@
 package net.jaumebalmes.grincon17.wannago.models;
 
-import android.app.Activity;
 import android.content.Context;
-
-import com.google.gson.JsonIOException;
-import com.google.gson.JsonObject;
-
 import net.jaumebalmes.grincon17.wannago.R;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-
 import javax.net.ssl.HttpsURLConnection;
 
 public class PlaceApi {

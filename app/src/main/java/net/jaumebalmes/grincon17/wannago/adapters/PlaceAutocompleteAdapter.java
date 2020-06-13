@@ -17,13 +17,13 @@ public class PlaceAutocompleteAdapter extends ArrayAdapter implements Filterable
     private Context context;
     private int resource;
     private PlaceApi placeApi = new PlaceApi();
-    private Activity activity;
+
 
     public PlaceAutocompleteAdapter(@NonNull Context context, int resource) {
         super(context, resource);
         this.context = context;
         this.resource = resource;
-        this.activity = activity;
+
     }
 
     @Override

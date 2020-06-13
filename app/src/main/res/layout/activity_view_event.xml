@@ -126,7 +126,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageViewDetailEvent"
         app:layout_constraintVertical_bias="0.452" />
 
-    <FrameLayout
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/map"
         android:layout_width="291dp"
         android:layout_height="160dp"

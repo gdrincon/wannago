@@ -4,6 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.content.Context;
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,7 +21,11 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import net.jaumebalmes.grincon17.wannago.R;
 
+import java.io.IOException;
+import java.util.List;
+
 public class MapsFragment extends Fragment {
+
 
     private OnMapReadyCallback callback = new OnMapReadyCallback() {
 
@@ -33,9 +40,12 @@ public class MapsFragment extends Fragment {
          */
         @Override
         public void onMapReady(GoogleMap googleMap) {
-            LatLng sydney = new LatLng(-34, 151);
-            googleMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-            googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+            Bundle bundle = getArguments();
+            String location = bundle.getString("LOCATION");
+
+            LatLng address = getLocationFromAddress(getContext(), location);
+            googleMap.addMarker(new MarkerOptions().position(address).title(location));
+            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(address, 15));
         }
     };
 
@@ -55,5 +65,19 @@ public class MapsFragment extends Fragment {
         if (mapFragment != null) {
             mapFragment.getMapAsync(callback);
         }
+    }
+
+    public LatLng getLocationFromAddress(Context context, String inputAddress) {
+        LatLng latLng = null;
+        Geocoder geocoder = new Geocoder(context);
+        List<Address> address;
+        try {
+            address = geocoder.getFromLocationName(inputAddress, 1);
+            Address location = address.get(0);
+            latLng = new LatLng(location.getLatitude(), location.getLongitude());
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+        return latLng;
     }
 }
